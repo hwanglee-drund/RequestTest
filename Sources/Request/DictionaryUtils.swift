@@ -10,8 +10,7 @@ import Foundation
 
 /**
  * Contains helpful utilities related to dictionaries
- */
-class DictionaryUtils {
+ */ class DictionaryUtils {
     /**
      * Merges parameters into a default dictionary.
      * - Property dictionary1: Dictionary of parameters to merge onto the first dictionary.

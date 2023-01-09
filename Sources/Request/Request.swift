@@ -58,10 +58,10 @@ public class Request {
             }
          } else if let bool = value as? Bool {
             components.append("\(withKey)=\(bool ? "1" : "0")")
-         } else if var string = value as? String {
+         } else if let string = value as? String {
             let allowChars = CharacterSet(charactersIn: "._-")
             let charset = CharacterSet.alphanumerics.union(allowChars)
-            string = string.replacingOccurrences(of: "‘", with: "'")
+            
             components.append("\(withKey)=\(string.addingPercentEncoding(withAllowedCharacters: charset) ?? string)")
          } else if let number = value as? NSNumber {
             components.append("\(withKey)=\(number)")
