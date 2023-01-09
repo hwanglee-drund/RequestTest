@@ -8,6 +8,7 @@
 
 import Foundation
 
+@available(iOS 13.0, *)
 public class UploadPlayerOperationQueue: OperationQueue {
    override public func cancelAllOperations() {
       for case let operation as MockPhotoUploadOperation in operations {
@@ -100,6 +101,7 @@ public class UploadPlayerOperationQueue: OperationQueue {
 //   }
 //}
 
+@available(iOS 13.0, *)
 public class MockPhotoUploadOperation: AsyncOperation, ObservableObject {
     var timer: Timer? = .none
 
